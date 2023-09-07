@@ -1,0 +1,76 @@
+<div>
+    <div class="top">
+        <h3>Categories</h3>
+        <input class="btn btn-primary btn-one" type="button" value="Return to Products" (click)="backToProducts()"> 
+        <input class="btn btn-primary btn-one" type="button" value="Add New Category" (click)="addCategoryDetails(addCategory)">
+        <div class="serach-div">
+            <label class="Search-text" for="searchBar">Search</label>
+            <input type="search" class="form-control search-category" id="searchBar" name="searchCategory" #categoryName (keyup)="searchCategory(categoryName.value)">
+        </div>
+    </div>
+<table class="table">
+    <tr>
+        <th>Category ID</th>
+        <th>Category Name</th>
+        <th>Category Description</th>
+        <th>Image</th>
+        <!-- <th>Active</th>
+        <th>Added On</th> -->
+        <th></th>
+    </tr>
+    <tr *ngFor="let category of categories;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{category.categoryName}}</td>
+        <td>{{category.categoryDescription}}</td>
+        <td><img src="{{category.categoryImageUrl}}" alt="Image Not Found"></td>
+        <td>
+            <input class="btn btn-primary btn-width" type="button" value="Update" (click)="updateCategory(category, updateCategoryModal)">
+            <input class="btn btn-danger btn-width" type="button" value="Delete" (click)="deleteCategory(category.cid)">
+        </td>
+    </tr>
+</table>
+</div>
+<ng-template #addCategory let-modal class="modal-dialog">
+    <div class="model-header">
+        <h2>Add Category Deatils</h2>
+    </div>
+    <div class="model-body">
+        <form [formGroup]="addCategoryForm" (ngSubmit)="storeCategory()">
+            <label for="categoryName" class="col-sm-2 col-form-label ">Name</label>
+            <input type="text" class="form-control" id="categoryName" placeholder="Category Name" formControlName="categoryName">
+            <br>
+            <label for="categoryDescription" class="col-sm-2 col-form-label ">Description</label>
+            <input type="text" class="form-control" id="categoryDescription" placeholder="Description" formControlName="categoryDescription">
+            <br>
+            <label for="categoryImageUrl" class="col-sm-2 col-form-label ">Image URL</label>
+            <input type="text" class="form-control" id="categoryImageUrl" placeholder="Image URL" formControlName="categoryImageUrl">
+            <br>
+            <button type="submit" class="btn btn-primary">Add Category</button>
+        </form>
+        <br>
+        <input class="btn btn-primary" type="button" value="Close" (click)="modal.close('close')">
+    </div>
+</ng-template>
+
+<ng-template #updateCategoryModal let-modal class="modal-dialog">
+    <div class="model-header">
+        <h2>Update Category Deatils</h2>
+    </div>
+    <div class="model-body">
+        <form [formGroup]="addCategoryForm" (ngSubmit)="updateCategoryFromDb()">
+            <label for="categoryName" class="col-sm-2 col-form-label label-modal">Name</label>
+            <input type="text" class="form-control input-modal" id="categoryName" placeholder="Category Name" formControlName="categoryName">
+            <br>
+            <label for="categoryDescription" class="col-sm-2 col-form-label label-modal">Description</label>
+            <input type="text" class="form-control input-modal" id="categoryDescription" placeholder="Description" formControlName="categoryDescription">
+            <br>
+            <label for="categoryImageUrl" class="col-sm-2 col-form-label label-modal">Image URL</label>
+            <input type="text" class="form-control input-modal" id="categoryImageUrl" placeholder="Image URL" formControlName="categoryImageUrl">
+            <br>
+            <button type="submit" class="btn btn-primary btn-modal btn-modal-update">Update Category</button>
+        </form>
+        <br>
+        <input class="btn btn-primary btn-modal btn-modal-close" type="button" value="Close" (click)="modal.close('close')">
+    </div>
+</ng-template>
+<router-outlet></router-outlet>

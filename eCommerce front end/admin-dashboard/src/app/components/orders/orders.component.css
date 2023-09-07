@@ -1,0 +1,45 @@
+div{
+    margin-top: 77px;
+}
+
+h3{
+    margin-bottom: 31px;
+}
+
+th{
+    background-color: blue;
+    color: white;
+    height: 47px;
+}
+
+.table{
+    color: black;
+}
+
+tr:nth-child(odd) {
+    background-color: #d3d3d3;
+}
+
+img{
+    width: 100px;
+}
+
+.btn{
+    background-color: rgb(28, 27, 27);
+    width: 100%;
+    color: white;
+}
+
+.btn:hover{
+    background-color: green;
+}
+
+th{
+    text-align: center;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 7px 20px;
+}
+  

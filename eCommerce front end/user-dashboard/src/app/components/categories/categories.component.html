@@ -1,0 +1,32 @@
+<div>
+    <div class="top">
+        <h3>Categories</h3>
+        <!-- <input class="btn btn-primary btn-one" type="button" value="Delete Products"> 
+        <input class="btn btn-primary btn-two" type="button" value="Add Category"> -->
+        <input class="btn btn-primary btn-one" type="button" value="Return to Products" (click)="backToProducts()"> 
+    </div>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Category Description</th>
+        <th>Image</th>
+        <th>Active</th>
+        <th>Added On</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let category of categories">
+        <td>{{category.id}}</td>
+        <td>{{category.categoryName}}</td>
+        <td>{{category.categoryDescription}}</td>
+        <td><img src="{{category.categoryImageUrl}}" alt="Image Not Found"></td>
+        <td>{{category.active}}</td>
+        <td>{{category.addedOn}}</td>
+        <td>
+            <input class="btn btn-primary btn-width" type="button" value="Update">
+            <input class="btn btn-danger btn-width" type="button" value="Delete">
+        </td>
+    </tr>
+</table>
+</div>
+<router-outlet></router-outlet>

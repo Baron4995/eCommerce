@@ -1,0 +1,78 @@
+div{
+    margin-top: 77px;
+}
+
+.top{
+    margin-bottom: 31px;
+}
+
+.btn-one{
+    float: right;
+    margin-right: 30px;
+}
+
+.btn-two{
+    float: right;
+    margin-right: 5px;
+}
+
+.search-span{
+    margin-left: 3px;
+    margin-right: 9px;
+    font-size: 18px;
+}
+
+.searchProduct{
+    border-radius: 6px;
+    border: 1.5px solid black;
+    margin-bottom: 17px;
+    width: 30%;
+    padding: 3px;
+}
+
+h3{
+    margin-bottom: 31px;
+    display: inline;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 7px 20px;
+}
+
+th{
+    text-align: center;
+    background-color: blue;
+    color: white;
+    height: 47px;
+}
+
+tr:nth-child(odd) {
+    background-color: #d3d3d3;
+}
+
+img{
+    width: 170px;
+}
+
+.btn-primary{
+    background-color: rgb(28, 27, 27);
+    border-color: rgb(28, 27, 27);
+}
+
+.btn-primary:hover{
+    background-color: green;
+}
+
+.btn-danger{
+    background-color: green;
+    border: green;
+}
+
+.btn-danger:hover{
+    background-color: rgb(18, 156, 18);
+}
+
+.btn-width{
+    width: 100%;
+}

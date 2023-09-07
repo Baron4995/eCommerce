@@ -1,0 +1,16 @@
+127.0.0.1 - - [02/Aug/2023:11:40:34 -0700] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:40:34 -0700] "GET /phase2-backend-restapi/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:54:46 -0700] "OPTIONS /phase2-backend-restapi/UserSignInController HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:54:46 -0700] "POST /phase2-backend-restapi/UserSignInController HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:55:03 -0700] "POST /phase2-backend-restapi/UserSignInController HTTP/1.1" 200 29
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:56:07 -0700] "POST /phase2-backend-restapi/UserSignInController HTTP/1.1" 200 17
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:56:12 -0700] "GET /phase2-backend-restapi/OrdersController HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:56:15 -0700] "GET /phase2-backend-restapi/ProductController HTTP/1.1" 200 1928
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:56:27 -0700] "OPTIONS /phase2-backend-restapi/OrdersController HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:56:27 -0700] "POST /phase2-backend-restapi/OrdersController HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:58:49 -0700] "GET /phase2-backend-restapi/OrdersController HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:58:50 -0700] "GET /phase2-backend-restapi/ProductController HTTP/1.1" 200 1928
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:11:59:08 -0700] "POST /phase2-backend-restapi/OrdersController HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:12:55:26 -0700] "GET /phase2-backend-restapi/ProductController HTTP/1.1" 200 1928
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:12:55:39 -0700] "OPTIONS /phase2-backend-restapi/OrdersController HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [02/Aug/2023:12:55:39 -0700] "POST /phase2-backend-restapi/OrdersController HTTP/1.1" 200 35

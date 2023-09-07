@@ -1,0 +1,47 @@
+<div class="all">
+    <h3>Orders</h3>
+    <table class="table" >
+        <tr>
+            <th>ID</th>
+            <th>Order Date</th>
+            <th>Order Status</th>
+            <th>Email</th>
+            <th>Shipment Charges</th>
+            <!-- <th>Total Items</th> -->
+            <th>Total Amount</th>
+            <!-- <th>Product ID</th> -->
+            <th>Title</th>
+            <!-- <th>Description</th> -->
+            <!-- <th>Price</th> -->
+            <!-- <th>Discount Percentage</th> -->
+            <!-- <th>Rating</th> -->
+            <th>Stock</th>
+            <th>Brand</th>
+            <!-- <th>Category ID</th> -->
+            <!-- <th>Thumbnail</th> -->
+            <th>Quantity</th>
+            <th>Edit</th>
+        </tr>
+        <tr *ngFor="let order of orders;let i = index">
+                <td>{{order.orderid}}</td>
+                <td>{{order.orderDate | date: format}}</td>
+                <td>{{order.orderStatus}}</td>
+                <td>{{order.email}}</td>
+                <td>{{order.shipmentCharges}}</td>
+                <!-- <td>{{order.totalItems}}</td> -->
+                <td>{{order.totalAmount}}</td>
+                <!-- <td>{{order.pid}}</td> -->
+                <td>{{order.title}}</td>
+                <!-- <td>{{order.description}}</td> -->
+                <!-- <td>{{order.price}}</td> -->
+                <!-- <td>{{order.discountPercentage}}</td> -->
+                <!-- <td>{{order.rating}}</td> -->
+                <td>{{order.stock}}</td>
+                <td>{{order.brand}}</td>
+                <!-- <td>{{order.cid}}</td> -->
+                <!-- <td>{{order.thumbnail}}</td> -->
+                <td>{{order.qty}}</td>
+                <td><input class="btn btn-primary btn-width" type="button" value="Edit"></td>
+        </tr>
+    </table>
+    </div>

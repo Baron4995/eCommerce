@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import'~normalize.css'; */
+
+/* "../node_modules/normalize.css/normalize.css", */
+
+p{
+    margin-top: 50px;
+    margin-left: 9px;
+}
+
+
+

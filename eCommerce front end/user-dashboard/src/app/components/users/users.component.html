@@ -1,0 +1,36 @@
+<div class="all">
+
+<div class="top">
+    <h3>Users</h3>
+    <input class="btn btn-primary btn-one" type="button" value="Return to Dashboard" (click)="backToDashboard()"> 
+</div>
+<table class="table" >
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Fullname</th>
+        <th>Address</th>
+        <th>Email ID</th>
+        <th>Password</th>
+        <th>Image</th>
+        <th>Contact</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.fullName}}</td>
+        <td>{{user.address.street}} <br>
+            {{user.address.city}}, 
+            {{user.address.state}}, 
+            {{user.address.country}}, 
+            {{user.address.pincode}}
+        </td>
+        <td>{{user.emailid}}</td>
+        <td>{{user.password}}</td>
+        <td><img src="{{user.img}}" alt="Image Not Found"></td>
+        <td>{{user.contact}}</td>
+        <td><input class="btn btn-primary btn-width" type="button" value="View Orders"></td>
+    </tr>
+</table>
+</div>

@@ -1,0 +1,43 @@
+.container-fluid{
+    background-color: rgb(34, 33, 33);
+    padding: 12px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+
+li{
+    margin-right: 18px;
+}
+
+li:hover{
+    background-color: rgb(67, 64, 64);
+}
+
+.navbar-brand{
+    color: white;
+    cursor: pointer;
+}
+
+.nav-link{
+    color: white;
+}
+
+.btn{
+    color: white;
+    border-color: white;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    color: white;
+}
+
+.me-2{
+    width: 350px;
+}
+

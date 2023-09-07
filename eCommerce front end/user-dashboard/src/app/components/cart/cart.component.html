@@ -1,0 +1,48 @@
+<div>
+    <div class="cartEmpty-container" *ngIf="cartEmpty">
+        <span>Cart Empty</span>
+    </div>
+    <div *ngIf="cartFlag">
+        <div class="top">
+            <h3>Cart</h3>
+            <input class="btn btn-primary btn-two" type="button" value="Keep Shopping" (click)="backToProducts()">
+        </div>
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Brand</th>
+                <th>Thumbnail</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let cart of cart; let i=index">
+                <td>{{cart.title}}</td>
+                <td>{{cart.brand}}</td>
+                <td><img src="{{cart.thumbnail}}" alt="image Not Found"></td>
+                <td>{{cart.qty}}</td>
+                <td>${{cart.price}}</td>
+                <td class="col-2">
+                    <input class="btn btn-primary btn-width" type="button" value="Add One More" (click)="increment(cart, i)">
+                    <input class="btn btn-primary btn-width" type="button" value="Take Out One" (click)="decrement(cart, i)">
+                    <!-- <input class="btn btn-primary btn-width" type="button" value="Add To Whishlist" (click)="addToWishlist(product)"> -->
+                    <input class="btn btn-primary btn-width" type="button" value="Delete Product" (click)="removeProduct(cart, i)">
+                </td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>{{totalPrice}}</td>
+            </tr>
+        </table>
+        <div>
+            <input class="btn btn-primary btn-width" type="button" value="Proceed To Payment" (click)="proceedToPayment()">
+        </div>
+    </div>
+    <div *ngIf="paymentFlag">
+        <h2>Add your payment information</h2>
+        <h4>Your bank balance is: {{bankBalance}}</h4>
+        <h6>Total due: {{totalPrice + 100}}</h6>
+        <input class="btn btn-primary btn-width" type="button" [value]="b1" (click)="makeAPayment()" [disabled]="flagBalance">
+    </div>
+</div>
+

@@ -1,0 +1,30 @@
+<div class="all">
+    <h3>Orders</h3>
+    <!-- your date details {{dateInfo}} <br>
+    your date details {{dateInfo | date}} -->
+    <table class="table" >
+        <tr>
+            <th>ID</th>
+            <th>Order Date</th>
+            <th>Order Status</th>
+            <th>Brand</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Edit Order</th>
+        </tr>
+        <tr *ngFor="let order of orders; let i = index">
+            <td>{{order.orderid}}</td>
+            <td>{{order.orderDate | date:formatDate}}</td>
+            <td>{{order.orderStatus}}</td>
+            <td>{{order.brand}}</td>
+            <td>{{order.qty}}</td>
+            <td>{{order.totalAmount}}</td>
+            <td>
+                <input class="btn btn-primary btn-width" type="button" value="Edit Order">
+            </td>
+        </tr>
+    </table>
+    <div class="little-box">
+        <span class="thankYou">Thank you for shopping with us!!!</span>
+    </div>
+    </div>

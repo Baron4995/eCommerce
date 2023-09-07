@@ -1,0 +1,53 @@
+<div class="wrapper">
+<div class="second-window container d-flex">
+    <div class="content">
+        <h3 class="titulo">E-Commerce Store</h3>
+        <h6 class="titulo">Admin Dashboard</h6>
+        <p class="para">
+            Manage Dynamic Content For Your Website <br>
+            An Optimal, Reliable And Dynamic Web Backend <br>
+            Modern Secure Interface Based On Google Cloud <br>
+        </p>
+    </div>
+</div>
+<div class="all container d-flex justify-content-center">
+<form class="login" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <fieldset class="title">Login</fieldset>
+    <div>
+      <label for="inputEmail3" class="col-sm-2 col-form-label email">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control email-input" id="inputEmail4" placeholder="abc@example.com" formControlName="emailid">
+
+        <!-- <span class="error" *ngIf="loginForm.get('email').errors?.['required'] && loginForm.get('email').touched">Email is required</span>
+        <span class="error" *ngIf="loginForm.get('email').errors?.['email'] && loginForm.get('email').touched">Invalid Email</span> -->
+
+        <div *ngIf="loginForm.controls['emailid']?.invalid && loginForm.controls['emailid']?.touched">
+        <span class="error" [hidden]="!loginForm.controls['emailid']?.hasError('required')">Email is required</span>
+        <span class="error" [hidden]="!loginForm.controls['emailid']?.hasError('emailid')">Invalid Email</span>
+        </div>
+        <!-- <p>email: {{email.value}}</p> -->
+      </div>
+    </div>
+    <div>
+      <label for="inputPassword3" class="col-sm-2 col-form-label password">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control password-input" id="inputPassword3" placeholder="********" formControlName="password">
+        
+        <!-- <span class="error" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">Password required</span> -->
+
+        <div *ngIf="loginForm.controls['password']?.invalid && loginForm.controls['password']?.touched">
+        <span class="error" [hidden]="!loginForm.controls['password']?.hasError('required')">Password Required</span>
+        <span class="error" [hidden]="!loginForm.controls['password']?.hasError('minlength')">Password Not Valid</span>
+        </div>
+        <!-- <p>password: {{password.value}}</p> -->
+      </div>
+    </div>
+    <div class="check-box">
+        <input type="checkbox" class="form-check-input">
+        <label for="" class="fomr-check-label">Remember Me</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button><br>
+    <span class="error-msg">{{msg}}</span>
+</form>
+</div>
+</div>  

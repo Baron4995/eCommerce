@@ -1,0 +1,42 @@
+<div>
+    <div class="top">
+        <h3>Products</h3>
+        <!-- <input class="btn btn-primary btn-one" type="button" value="Add Products">  -->
+        <input class="btn btn-primary btn-two" type="button" value="See Categories" (click)="categories()">
+    </div>
+    <span class="search-span">Search</span>
+    <input class="searchProduct" type="text" [(ngModel)]="searchForProducts">
+<table class="table">
+    <tr>
+        <!-- <th>ID</th> -->
+        <th>Title</th>
+        <th>Description</th>
+        <th>Price</th>
+        <!-- <th>Discount</th> -->
+        <th>Rating</th>
+        <!-- <th>Stock</th> -->
+        <th>Brand</th>
+        <!-- <th>Category</th> -->
+        <th>Thumbnail</th>
+        <th class="col-2">Add</th>
+    </tr>
+    <tr *ngFor="let product of products | searchproducts:searchForProducts ">
+        <!-- <td>{{product.id}}</td> -->
+        <td>{{product.title}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price | currency}}</td>
+        <!-- <td>{{product.discountPercentage}}</td> -->
+        <td>{{product.rating}}</td>
+        <!-- <td>{{product.stock}}</td> -->
+        <td>{{product.brand}}</td>
+        <!-- <td>{{product.category}}</td> -->
+        <td><img src="{{product.thumbnail}}" alt="image Not Found"></td>
+        <td>
+            <!-- <input class="btn btn-primary btn-width" type="button" value="View Images"> -->
+            <!-- <input class="btn btn-primary btn-width" type="button" value="View Details"> -->
+            <!-- <input class="btn btn-primary btn-width" type="button" value="Add To Whishlist" (click)="addToWishlist(product)"> -->
+            <input class="btn btn-primary btn-width" type="button" value="Add" (click)="addToCart(product)">
+        </td>
+    </tr>
+</table>
+</div>

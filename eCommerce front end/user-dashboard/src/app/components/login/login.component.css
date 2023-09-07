@@ -1,0 +1,85 @@
+.wrapper{
+    display: flex;
+ }
+
+.wrapper  .second-window,
+.wrapper  .all{
+    width: 50%;
+    height: 100vh;
+ }
+
+.wrapper .second-window{
+    /* background: blue; */
+    background: linear-gradient(to bottom right,rgb(15, 15, 197), rgb(20, 20, 166));
+ }
+
+.wrapper.all{
+    background: white;
+ }
+
+.login{
+    /* margin-top: 190px; */
+    margin-left: 80px;
+    align-self: center;
+    margin-bottom: 100px;
+ }
+
+.form-control{
+    max-width: 424px;
+    width: 30vw;
+    min-width: 150px;
+    /* margin-bottom: 13px; */
+    padding: 9px;
+ }
+
+.title{
+    font-weight: bold;
+    font-size: 25px;
+    /* margin-left: 160px; */
+    margin-bottom: 7px;
+    text-align: center;
+ }
+
+ .check-box{
+    margin-top: 27px;
+    min-width: 140px;
+ }
+
+.btn{
+    margin-top: 9px;
+    width: 30vw;
+    max-width: 424px;
+    padding: 9px;
+    background-color: rgb(38, 38, 247);
+}
+
+.error-msg{
+    color: red;
+}
+
+.content{
+    align-self: center;
+    margin-left: 16px;
+    margin-bottom: 47;
+}
+
+.titulo{
+    color: white;
+}
+
+.para{
+    color: white;
+    margin-left: 0px;
+}
+
+.email-input.ng-invalid.ng-touched{
+    border-color: red;
+}
+
+.password-input.ng-invalid.ng-touched{
+    border-color: red;
+}
+
+.error{
+    color: red;
+}

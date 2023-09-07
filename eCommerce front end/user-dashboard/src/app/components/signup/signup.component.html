@@ -1,0 +1,91 @@
+<form class="login" [formGroup]="signupForm" (ngSubmit)="signUp()">
+    <fieldset class="title">SignUp</fieldset>
+    <div>
+        <label for="username" class="col-sm-2 col-form-label">Username</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="username" placeholder="username" formControlName="username">
+        </div>
+    </div>
+    <div>
+        <label for="fullName" class="col-sm-2 col-form-label">Full Name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="fullName" placeholder="Full Name" formControlName="fullName">
+        </div>
+    </div>
+    <!-- <div formGroupName="address"> -->
+    <div>
+        <br>
+        <span>Address Details:</span>
+        <br>
+        <div>
+            <label for="street" class="col-sm-2 col-form-label">Street</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="street" placeholder="123 main st" formControlName="street">
+            </div>
+        </div>
+        <div>
+            <label for="city" class="col-sm-2 col-form-label">City</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="city" placeholder="City" formControlName="city">
+            </div>
+        </div>
+        <div>
+            <label for="state" class="col-sm-2 col-form-label">State</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="state" placeholder="State" formControlName="state">
+            </div>
+        </div>
+        <div>
+            <label for="country" class="col-sm-2 col-form-label">Country</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="country" placeholder="Country" formControlName="country">
+            </div>
+        </div>
+        <div>
+            <label for="pincode" class="col-sm-2 col-form-label">Zip code</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="pincode" placeholder="Zip code" formControlName="pincode">
+            </div>
+        </div>
+    </div>
+    <br>
+    <span>More Personl Information:</span>
+    <br>
+    <div>
+      <label for="emailid" class="col-sm-2 col-form-label email">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="emailid" placeholder="abc@example.com" formControlName="emailid">
+        <div *ngIf="signupForm.controls['email']?.invalid && signupForm.controls['email']?.touched">
+        <span class="error" [hidden]="!signupForm.controls['email'].hasError('required')">Email is required</span>
+        <span class="error" [hidden]="!signupForm.controls['email'].hasError('email')">Invalid Email</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label for="password" class="col-sm-2 col-form-label password">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="password" placeholder="********" formControlName="password">
+        <div *ngIf="signupForm.controls['password']?.invalid && signupForm.controls['password']?.touched">
+        <span class="error" [hidden]="!signupForm.controls['password'].hasError('required')">Password Required</span>
+        <span class="error" [hidden]="!signupForm.controls['password'].hasError('minlength')">Password Not Valid</span>
+        </div>
+      </div>
+    </div>
+    <div>
+        <label for="img" class="col-sm-2 col-form-label">Profile Picture</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="img" placeholder="image link" formControlName="img">
+        </div>
+    </div>
+    <div>
+        <label for="contact" class="col-sm-2 col-form-label">Contact Number</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="contact" placeholder="1234567" formControlName="contact">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">SignUp</button><br>
+    <span class="error-msg">{{msg}}</span>
+    <br>
+    <a routerLink="/login">Back To Login</a>
+</form>
