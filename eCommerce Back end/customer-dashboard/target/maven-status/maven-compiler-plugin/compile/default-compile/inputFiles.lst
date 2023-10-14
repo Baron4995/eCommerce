@@ -1,0 +1,16 @@
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/controller/ProductController.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/controller/AccountsController.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/bean/Product.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/bean/Orders.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/service/OrdersService.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/customerdashboard/CustomerDashboardApplication.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/repository/AccountsRepository.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/bean/OrdersInfo.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/entity/Accounts.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/entity/Users.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/service/ProductService.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/controller/UsersController.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/service/AccountsService.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/repository/UsersRepository.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/controller/OrdersController.java
+/Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard/src/main/java/com/eCommerce/service/UsersService.java
