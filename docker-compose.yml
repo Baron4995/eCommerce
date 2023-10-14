@@ -9,27 +9,27 @@ services:
       - 3307:3306
     restart: always
   springboot-container-admin:
-    build: /Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/admin-dashboard
+    build: ./eCommerce Back end/admin-dashboard
     depends_on:
       - mysql-container
     ports:
       - 8181:8181
     restart: always
   springboot-container-customer:
-    build: /Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/customer-dashboard
+    build: ./eCommerce Back end/customer-dashboard
     depends_on:
       - mysql-container
     ports:
       - 8283:8282
     restart: always
   springboot-container-eureka:
-    build: /Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/eureka-server
+    build: ./eCommerce Back end/eureka-server
     depends_on:
       - mysql-container
     ports:
       - 8761:8761
     restart: always
   angular-container-admin:
-    build: /Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce front end/admin-dashboard
+    build: ./eCommerce front end/admin-dashboard
     ports:
       - 80:80
