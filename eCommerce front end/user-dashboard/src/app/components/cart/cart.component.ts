@@ -103,6 +103,7 @@ export class CartComponent implements OnInit{
     if(this.cart.length === 0){
       this.paymentFlag = false;
       alert("You have no items your the cart");
+
     }else{
       this.paymentFlag = true;
       this.cartFlag = false;
@@ -119,13 +120,13 @@ export class CartComponent implements OnInit{
 
   makeAPayment(){
     let orderDeatils = new Orders();
-      orderDeatils.orderDate = new Date().toISOString().substring(0, 18);
+      // orderDeatils.orderDate = new Date().toISOString().substring(0, 18);
       orderDeatils.products = [...this.cart]; //copying cart array into products. This is called spread operator.
       orderDeatils.totalItems = this.cart.length;
       orderDeatils.shipmentCharges = 100;
       orderDeatils.totalAmount = this.totalPrice;
       orderDeatils.email = this.user.emailid;
-      orderDeatils.pid = orderDeatils.products[0].id;
+      orderDeatils.pid = orderDeatils.products[0].pid;
 
     this.orderService.placeOrder(orderDeatils).subscribe({
       next:(data:any)=>{

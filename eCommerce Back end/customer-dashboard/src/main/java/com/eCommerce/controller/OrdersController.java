@@ -27,6 +27,7 @@ public class OrdersController {
 	
 	@PostMapping(value = "placeOrder", consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String placeOrder(@RequestBody OrdersInfo orderInfo) {
+//		System.out.println(orderInfo);
 		return ordersService.placeOrder(orderInfo);
 	}
 	

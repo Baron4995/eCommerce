@@ -23,6 +23,8 @@ public class OrdersService {
 		orderInfo.setOrderDate(LocalDateTime.now());
 		String result = restTemplate.postForObject("http://ADMIN-DASHBOARD/admin/orders/placeOrders", orderInfo, String.class);
 		accountsService.debitAmount(orderInfo.getEmail(), orderInfo.getTotalAmount());
+//		System.out.println(orderInfo);
+
 		return result;
 	}
 	

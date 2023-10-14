@@ -22,6 +22,9 @@ public class OrdersService {
 	
 	public String placeOrder(OrdersInfo ordersInfo) {
 		
+		System.out.println(ordersInfo);
+
+		
 		Orders orders = new Orders();
 		orders.setEmail(ordersInfo.getEmail());
 		orders.setOrderDate(ordersInfo.getOrderDate());

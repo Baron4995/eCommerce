@@ -19,14 +19,16 @@ export class Orders {
 
 export class OrderProducts {
     constructor(
-        public id?:number, 
-        public productTitle?:string, 
-        public productImg?:string, 
-        public brand?:string, 
-        public productDescription?:string, 
-        public productCategory?:string, 
+        public pid?:number, 
+        public title?:string, 
+        public description?:string, 
         public price?:number, 
-        public quantity?:number, 
-        public TotalPrice?:number
+        public discountPercentage?:number,
+        public rating?:number,
+        public stock?:number,
+        public brand?:string,
+        public cid?:number,
+        public thumbnail?:string,
+        public qty?:number, 
     ){}
 }
