@@ -9,7 +9,7 @@ services:
       - 3307:3306
     restart: always
   springboot-container-admin:
-    build: /Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/admin-dashboard/
+    build: /Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce Back end/admin-dashboard
     depends_on:
       - mysql-container
     ports:
@@ -30,6 +30,6 @@ services:
       - 8761:8761
     restart: always
   angular-container-admin:
-    build: /Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce front end/admin-dashboard/
+    build: /Users/baron/Desktop/COMPUTER SCIENCE/Capstone Project/eCommerce/eCommerce front end/admin-dashboard
     ports:
       - 80:80
