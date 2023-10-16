@@ -15,13 +15,6 @@ services:
     ports:
       - 8181:8181
     restart: always
-  springboot-container-customer:
-    build: ./eCommerce Back end/customer-dashboard
-    depends_on:
-      - mysql-container
-    ports:
-      - 8283:8282
-    restart: always
   springboot-container-eureka:
     build: ./eCommerce Back end/eureka-server
     depends_on:
