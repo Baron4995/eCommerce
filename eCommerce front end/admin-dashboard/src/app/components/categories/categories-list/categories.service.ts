@@ -10,7 +10,7 @@ export class CategoriesService {
 
   // private baseUrl:string = "http://localhost:3000/categories";
   // private baseUrl:string = "http://localhost:8080/phase2-backend-restapi/CategoryController";
-  private baseUrl:string = "http://localhost:8181/admin/category";
+  private baseUrl:string = "http://52.87.183.49:8181/admin/category";
 
   constructor(public httpClient:HttpClient) { }
 

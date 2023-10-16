@@ -10,7 +10,7 @@ export class ProductsService {
 
   // private baseUrl:string = "http://localhost:3000/products";
   // private baseUrl:string = "http://localhost:8080/phase2-backend-restapi/ProductController";
-  private baseUrl:string = "http://localhost:8181/admin/product";
+  private baseUrl:string = "http://52.87.183.49:8181/admin/product";
 
   constructor(public httpClient: HttpClient) { }
 
