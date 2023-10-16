@@ -55,7 +55,7 @@ export class AuthService {
   // }
 
   signIn(admin:Admin):Observable<String>{
-    return this.httpClient.post("http://54.241.243.96:8181/admin/signIn", admin, {responseType:'text'});
+    return this.httpClient.post("http://54.176.63.95:8181/admin/signIn", admin, {responseType:'text'});
   }
 
 
