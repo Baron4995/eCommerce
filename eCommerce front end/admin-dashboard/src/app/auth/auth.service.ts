@@ -54,8 +54,12 @@ export class AuthService {
   //   return this.httpClient.post("http://localhost:8080/phase2-backend-restapi/AdminController", admin, {responseType:'text'});
   // }
 
-  signIn(admin:Admin):Observable<String>{
-    return this.httpClient.post("http://50.18.247.45/admin/signIn", admin, {responseType:'text'});
+  // signIn(admin:Admin):Observable<String>{
+  //   return this.httpClient.post("http://50.18.247.45/admin/signIn", admin, {responseType:'text'});
+  // }
+
+  signIn(admin:Admin):string{
+    return "Successfully Logged in";
   }
 
 }

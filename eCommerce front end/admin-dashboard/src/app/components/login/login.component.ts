@@ -47,26 +47,34 @@ export class LoginComponent {
       console.log(this.loginForm);
     }
     
-    this.authService.signIn(x).subscribe({
-      next:(result:any)=>{
-        if(result == "Successfully Logged in"){
-          console.log(result);
-          alert("Successfully Logged in");
-          console.log(result);
-          sessionStorage.setItem("x", x.email);
-          this.router.navigate([""]);
-        }else{
-          console.log(result);
-          alert("Failure To Login");
-        }
-      },
-      error:(error:any)=>{
-        console.log(error);
-      },
-      complete:()=>{
-        console.log("Admin Loggin task done");
-      }
-    })
+    // this.authService.signIn(x).subscribe({
+    //   next:(result:any)=>{
+    //     if(result == "Successfully Logged in"){
+    //       console.log(result);
+    //       alert("Successfully Logged in");
+    //       console.log(result);
+    //       sessionStorage.setItem("x", x.email);
+    //       this.router.navigate([""]);
+    //     }else{
+    //       console.log(result);
+    //       alert("Failure To Login");
+    //     }
+    //   },
+    //   error:(error:any)=>{
+    //     console.log(error);
+    //   },
+    //   complete:()=>{
+    //     console.log("Admin Loggin task done");
+    //   }
+    // })
+
+    if(this.authService.signIn(x) == "Successfully Logged in"){
+      console.log("Successfully Logged in");
+      alert("Successfully Logged in");
+      console.log(x);
+      sessionStorage.setItem("x", x.email);
+      this.router.navigate([""]);
+    }
 
 
 
