@@ -9,7 +9,7 @@ import { Orders } from './orders';
 export class OrdersService {
 
   // private baseUrl:string = "http://localhost:3000/orders";
-  private baseUrl:string = "http://localhost:8181/admin/orders/viewAllOrders";
+  private baseUrl:string = "http://54.241.243.96:8181/admin/orders/viewAllOrders";
 
   constructor(public httpClient:HttpClient) { }
 
